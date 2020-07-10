@@ -29,11 +29,18 @@
     [YLNewsSDKModeManager shareManager].isHaveNav = NO;
     [YLNewsSDKModeManager shareManager].isNeedRefreashButton = NO;
     //创建newsSDK
-    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"7c8b8eae081d36cb"
-                                            andApikey:@"7030160a7c2e2bfefcab1d23eaf3641d"
-                                           andTabType:YLNewsType
-                                         andLocalCity:@"上海"
-                                andHostViewController:self];
+//    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"7c8b8eae081d36cb"
+//                                            andApikey:@"7030160a7c2e2bfefcab1d23eaf3641d"
+//                                           andTabType:YLNewsType
+//                                         andLocalCity:@"上海"
+//                                andHostViewController:self];
+    //测试
+    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"ec6cf846cb1e96c4"
+                andApikey:@"3d74eedb9161f4c4f39731bf9d786c72"
+               andTabType:YLNewsType
+             andLocalCity:@"上海"
+    andHostViewController:self];
+    
     [self.yl_newssdk loadData];
     
     __weak typeof(self) weakSelf = self;
