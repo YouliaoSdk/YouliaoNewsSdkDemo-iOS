@@ -9,7 +9,7 @@
 #import "CSNewsController.h"
 #import "ComHeader.h" //这是测试demo的 和sdk的同名 但不是同一个
 #import <YLInfoFlowSDK/YLInfoFlowSDK.h>
-
+#import "WXApi.h"
 
 
 
@@ -28,6 +28,9 @@
     [YLNewsSDKModeManager shareManager].isHaveTabbar = YES;
     [YLNewsSDKModeManager shareManager].isHaveNav = NO;
     [YLNewsSDKModeManager shareManager].isNeedRefreashButton = NO;
+    [YLNewsSDKModeManager shareManager].WXShareAPPID = @"wx8b0b139d1103eaa0";
+    //    [YLNewsSDKModeManager shareManager].QQShareAPPID = @"tencent1107926553";
+    [YLNewsSDKModeManager shareManager].QQShareAPPID = @"1107926553";
     //创建newsSDK
 //    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"7c8b8eae081d36cb"
 //                                            andApikey:@"7030160a7c2e2bfefcab1d23eaf3641d"
@@ -43,31 +46,7 @@
     
     [self.yl_newssdk loadData];
     
-    __weak typeof(self) weakSelf = self;
-    
-    self.yl_newssdk.shareBlock = ^(NSDictionary *shareSourceDic) {
-        
-        NSLog(@"接收到分享内容 == %@",shareSourceDic);
-        //        UIViewController *avc = [[UIViewController alloc]init];
-        //        [self presentViewController:avc animated:YES completion:nil];
-        
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
-                                                                       message:@"This is an alert."
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
-                                                                style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {
-        }];
-        UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
-                                                               style:UIAlertActionStyleCancel
-                                                             handler:^(UIAlertAction * action) {}];
-        [alert addAction:cancelAction];
-        [alert addAction:defaultAction];
-        [weakSelf presentViewController:alert animated:YES completion:nil];
-    };
-    
-    
+   
     
     self.yl_newssdk.newsListScrollToTopBlock = ^(NSDictionary *scrollToTopDic) {
         //通知

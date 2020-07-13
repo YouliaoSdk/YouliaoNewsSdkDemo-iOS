@@ -365,7 +365,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.youliao.topic.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youliao.topic;
 				PRODUCT_NAME = "sdk测试";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -388,7 +388,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.youliao.topic.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youliao.topic;
 				PRODUCT_NAME = "sdk测试";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;

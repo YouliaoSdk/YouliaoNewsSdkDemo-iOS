@@ -11,10 +11,12 @@
 #import "CSTabbarController.h"
 #import <BUAdSDK/BUAdSDK.h>
 #import <BUAdSDK/BUAdSDKManager.h>
-//#import <UMCommon/UMCommon.h>
-//#import <UMShare/UMShare.h>
+#import "WXApi.h"
+#import  <TencentOpenAPI/QQApiInterfaceObject.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -33,15 +35,26 @@
     //初始化穿山甲
     [BUAdSDKManager setAppID:@"5029264"];
     
-    //初始化友盟
-//    [UMConfigure initWithAppkey:@"5f068450978eea082dbd7eab" channel:@"App Store"];
-    
     return YES;
 }
 
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
 
+    //分微信和qq
+//    [TencentOAuth HandleOpenURL:url];
+    
+    NSString *string =[url absoluteString];
+    if ([string hasPrefix:@"wx8b0b139d1103eaa0"]){
+//        return [WXApi handleOpenURL:url delegate:self];
+        
+    }else if ([string hasPrefix:@"tencent1107926553"]){
+        return[TencentOAuth HandleOpenURL:url];
+    }
 
+    return YES;
+
+}
 
 
 
