@@ -27,7 +27,7 @@
     [YLNewsSDKModeManager shareManager].isHaveNav = NO;
     [YLNewsSDKModeManager shareManager].isNeedRefreashButton = NO;
     [YLNewsSDKModeManager shareManager].WXShareAPPID = @"wx8b0b139d1103eaa0";
-    [YLNewsSDKModeManager shareManager].QQShareAPPID = @"tencent1107926553";
+    [YLNewsSDKModeManager shareManager].QQShareAPPID = @"1107926553";
     
     
     //创建newsSDK

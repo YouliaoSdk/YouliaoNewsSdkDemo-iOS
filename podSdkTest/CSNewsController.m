@@ -30,7 +30,7 @@
     [YLNewsSDKModeManager shareManager].isNeedRefreashButton = NO;
     [YLNewsSDKModeManager shareManager].WXShareAPPID = @"wx8b0b139d1103eaa0";
     //    [YLNewsSDKModeManager shareManager].QQShareAPPID = @"tencent1107926553";
-    [YLNewsSDKModeManager shareManager].QQShareAPPID = @"1107926553";
+    [YLNewsSDKModeManager shareManager].QQShareAPPID = @"1107926553";//不可带tencent
     //创建newsSDK
 //    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"7c8b8eae081d36cb"
 //                                            andApikey:@"7030160a7c2e2bfefcab1d23eaf3641d"
