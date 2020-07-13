@@ -6,11 +6,7 @@
 platform :ios, '10.0'
 
 target 'podSdkTest' do
-  pod 'YLNewsSdkTool'
-  pod 'Bytedance-UnionAD'
-  pod 'WechatOpenSDK', '~> 1.7.9'
-  pod 'TencentOpenApiSDK', '~> 2.9.5'
-  
-end 
+  pod 'YLNewsSDK'
+end
 
 
