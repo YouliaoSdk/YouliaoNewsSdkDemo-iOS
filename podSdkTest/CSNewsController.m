@@ -27,22 +27,23 @@
     [YLNewsSDKModeManager shareManager].isHoverMode = NO;
     [YLNewsSDKModeManager shareManager].isHaveTabbar = YES;
     [YLNewsSDKModeManager shareManager].isHaveNav = NO;
-    [YLNewsSDKModeManager shareManager].isNeedRefreashButton = NO;
+    [YLNewsSDKModeManager shareManager].isNeedRefreashButton = YES;
     [YLNewsSDKModeManager shareManager].WXShareAPPID = @"wx8b0b139d1103eaa0";
     //    [YLNewsSDKModeManager shareManager].QQShareAPPID = @"tencent1107926553";
     [YLNewsSDKModeManager shareManager].QQShareAPPID = @"1107926553";//不可带tencent
-    //创建newsSDK
-//    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"7c8b8eae081d36cb"
-//                                            andApikey:@"7030160a7c2e2bfefcab1d23eaf3641d"
-//                                           andTabType:YLNewsType
-//                                         andLocalCity:@"上海"
-//                                andHostViewController:self];
-    //测试
-    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"ec6cf846cb1e96c4"
-                andApikey:@"3d74eedb9161f4c4f39731bf9d786c72"
-               andTabType:YLNewsType
-             andLocalCity:@"上海"
-    andHostViewController:self];
+    
+    //创建newsSDK 正式服
+    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"7c8b8eae081d36cb"
+                                            andApikey:@"7030160a7c2e2bfefcab1d23eaf3641d"
+                                           andTabType:YLNewsType
+                                         andLocalCity:@"上海"
+                                andHostViewController:self];
+    //测试服
+//    self.yl_newssdk = [[YLNewsSDK alloc]initWithAppid:@"ec6cf846cb1e96c4"
+//                andApikey:@"3d74eedb9161f4c4f39731bf9d786c72"
+//               andTabType:YLNewsType
+//             andLocalCity:@"上海"
+//    andHostViewController:self];
     
     [self.yl_newssdk loadData];
     
