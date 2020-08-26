@@ -47,6 +47,14 @@
     
     [self.yl_newssdk loadData];
     
+    
+    self.yl_newssdk.shareBlock = ^(NSDictionary *shareSourceDic) {
+        NSLog(@"接收到分享内容 == %@",shareSourceDic);
+        //                    UIViewController *avc = [[UIViewController alloc]init];
+        //                    [self presentViewController:avc animated:YES completion:nil];
+        //
+        
+    };
    
     
     self.yl_newssdk.newsListScrollToTopBlock = ^(NSDictionary *scrollToTopDic) {
