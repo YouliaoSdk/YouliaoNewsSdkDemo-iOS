@@ -9,7 +9,7 @@
 #import "CSNewsController.h"
 #import "ComHeader.h" //这是测试demo的 和sdk的同名 但不是同一个
 #import <YLInfoFlowSDK/YLInfoFlowSDK.h>
-#import "WXApi.h"
+
 
 
 
