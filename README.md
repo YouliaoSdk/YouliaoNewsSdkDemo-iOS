@@ -1,5 +1,5 @@
 # 有料信息流SDK-iOS平台接入文档
-##示例demo地址：https://github.com/YLNewsSDK-iOS/sdkTest
+## 示例demo地址：https://github.com/YLNewsSDK-iOS/sdkTest
 ## 一、添加sdk及三方依赖
 
 ### 使用cocoapods管理(升级cocoapods为cdn搜索及配置)（推荐使用）
